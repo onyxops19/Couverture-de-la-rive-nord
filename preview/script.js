@@ -25,3 +25,29 @@ document.querySelectorAll('.stagger').forEach((group) => {
     item.style.transitionDelay = `${i * 100}ms`;
   });
 });
+
+// ============================================
+// Sticky nav: shadow on scroll + mobile toggle
+// ============================================
+const nav = document.getElementById('nav');
+const navToggle = document.getElementById('nav-toggle');
+const navList = document.getElementById('nav-list');
+
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('is-scrolled', window.scrollY > 80);
+}, { passive: true });
+
+navToggle.addEventListener('click', () => {
+  const isOpen = navList.classList.toggle('is-open');
+  navToggle.classList.toggle('is-open');
+  navToggle.setAttribute('aria-expanded', String(isOpen));
+});
+
+// Close menu when a link is clicked (mobile UX)
+navList.querySelectorAll('a').forEach((a) => {
+  a.addEventListener('click', () => {
+    navList.classList.remove('is-open');
+    navToggle.classList.remove('is-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  });
+});
