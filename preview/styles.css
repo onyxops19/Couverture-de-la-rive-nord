@@ -147,3 +147,33 @@ h1, h2, h3 {
 /* ============================================
    Component styles below — added per task
    ============================================ */
+
+/* ============================================
+   Top info bar
+   ============================================ */
+.info-bar {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.info-bar__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+
+.info-bar__phone, .info-bar__email {
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.info-bar__phone:hover, .info-bar__email:hover {
+  color: var(--brand-gold);
+}
+
+@media (max-width: 640px) {
+  .info-bar__email { display: none; }
+  .info-bar__inner { justify-content: center; }
+}
