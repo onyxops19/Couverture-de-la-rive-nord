@@ -1,4 +1,11 @@
 // ============================================
+// Hero reveals on load (above the fold)
+// ============================================
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.hero .reveal').forEach((el) => el.classList.add('is-visible'));
+});
+
+// ============================================
 // Reveal-on-scroll using IntersectionObserver
 // ============================================
 const revealObserver = new IntersectionObserver(
