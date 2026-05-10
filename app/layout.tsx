@@ -3,6 +3,7 @@ import { Raleway, Open_Sans } from 'next/font/google';
 import { PromoBar } from '@/components/layout/PromoBar';
 import { StickyNav } from '@/components/layout/StickyNav';
 import { Footer } from '@/components/layout/Footer';
+import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema';
 import './globals.css';
 
 const raleway = Raleway({
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr-CA" className={`${raleway.variable} ${openSans.variable}`}>
       <body>
+        <LocalBusinessSchema />
         <PromoBar />
         <StickyNav />
         {children}
