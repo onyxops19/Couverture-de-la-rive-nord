@@ -15,8 +15,8 @@
   --border: #E0E0E0;
 
   /* Typography */
-  --font-display: 'Raleway', system-ui, sans-serif;
-  --font-body: 'Open Sans', system-ui, sans-serif;
+  --font-display: var(--font-raleway), system-ui, sans-serif;
+  --font-body: var(--font-open-sans), system-ui, sans-serif;
 
   /* Spacing scale (8px base) */
   --space-1: 8px;
