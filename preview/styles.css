@@ -629,3 +629,32 @@ h1, h2, h3 {
 }
 
 .card:hover .card__link span { transform: translateX(4px); }
+
+/* ============================================
+   Inline CTA strip — intentional gold burst
+   ============================================ */
+.cta-strip {
+  background: var(--brand-gold);
+  color: var(--text-dark);
+  padding: var(--space-4) 0;
+}
+
+.cta-strip__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.cta-strip__text {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2vw, 24px);
+  font-weight: 700;
+  flex: 1;
+  min-width: 280px;
+}
+
+@media (max-width: 700px) {
+  .cta-strip__inner { flex-direction: column; text-align: center; }
+}
