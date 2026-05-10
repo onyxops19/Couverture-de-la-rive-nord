@@ -72,7 +72,11 @@ function countUp(el) {
     const t = Math.min((now - start) / duration, 1);
     const eased = 1 - Math.pow(1 - t, 3); // easeOutCubic
     el.textContent = Math.round(target * eased) + suffix;
-    if (t < 1) requestAnimationFrame(tick);
+    if (t < 1) {
+      requestAnimationFrame(tick);
+    } else {
+      el.classList.add('is-counted');
+    }
   }
   requestAnimationFrame(tick);
 }
