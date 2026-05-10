@@ -1,8 +1,22 @@
+# OS / IDE
 .DS_Store
 Thumbs.db
-node_modules/
-.next/
-.env*.local
-*.log
 .vscode/
 .idea/
+
+# Node
+node_modules/
+*.log
+
+# Next.js
+.next/
+out/
+build/
+dist/
+
+# Env
+.env*.local
+.env
+
+# Vercel
+.vercel
