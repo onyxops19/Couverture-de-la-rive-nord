@@ -816,3 +816,100 @@ h1, h2, h3 {
 .gallery.stagger .reveal:nth-child(4) { transition-delay: 240ms; }
 .gallery.stagger .reveal:nth-child(5) { transition-delay: 320ms; }
 .gallery.stagger .reveal:nth-child(6) { transition-delay: 400ms; }
+
+/* ============================================
+   Final CTA
+   ============================================ */
+.final-cta__inner { text-align: center; }
+
+.final-cta__title {
+  font-size: clamp(28px, 3.4vw, 38px);
+  margin-bottom: var(--space-2);
+  color: var(--white);
+}
+
+.final-cta__sub {
+  color: var(--cream);
+  font-size: 17px;
+  margin-bottom: var(--space-4);
+}
+
+.final-cta__btn {
+  font-size: 16px;
+  padding: 18px 40px;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.footer {
+  background: var(--brand-charcoal);
+  color: var(--cream);
+  padding-top: var(--space-8);
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--space-6);
+  padding-bottom: var(--space-6);
+}
+
+@media (max-width: 768px) {
+  .footer__inner { grid-template-columns: 1fr; gap: var(--space-4); }
+}
+
+.footer__logo img {
+  height: 60px;
+  width: auto;
+  margin-bottom: var(--space-3);
+}
+
+.footer__certs {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-3);
+}
+
+.footer__address {
+  font-style: normal;
+  margin-bottom: var(--space-2);
+  font-size: 14px;
+}
+
+.footer__contact {
+  list-style: none;
+  font-size: 14px;
+}
+
+.footer__contact li { margin-bottom: var(--space-1); }
+
+.footer__contact a:hover { color: var(--brand-gold); }
+
+.footer__heading {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: var(--space-2);
+}
+
+.footer__links {
+  list-style: none;
+  font-size: 14px;
+}
+
+.footer__links li { margin-bottom: var(--space-1); }
+
+.footer__links a:hover { color: var(--brand-gold); }
+
+.footer__copyright {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: var(--space-3) 0;
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+}
