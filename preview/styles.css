@@ -707,3 +707,55 @@ h1, h2, h3 {
   }
   .membrane--reverse .membrane__media { order: 0; }
 }
+
+/* ============================================
+   Advantages
+   ============================================ */
+.advantages {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin: var(--space-8) auto var(--space-6);
+  max-width: 1000px;
+}
+
+@media (max-width: 768px) {
+  .advantages { grid-template-columns: 1fr; gap: var(--space-4); }
+}
+
+.advantage {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advantage__icon {
+  width: 64px;
+  height: 64px;
+  color: var(--brand-gold);
+  margin-bottom: var(--space-2);
+  transition: transform var(--dur-base) var(--ease-out);
+}
+
+.advantage:hover .advantage__icon { transform: scale(1.05); }
+
+.advantage__title {
+  font-size: 22px;
+  margin-bottom: var(--space-1);
+  color: var(--white);
+}
+
+.advantage p {
+  color: var(--cream);
+  font-size: 15px;
+}
+
+.advantages__ctas {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-top: var(--space-4);
+}
