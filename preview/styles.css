@@ -658,3 +658,52 @@ h1, h2, h3 {
 @media (max-width: 700px) {
   .cta-strip__inner { flex-direction: column; text-align: center; }
 }
+
+/* ============================================
+   Membranes — alternating image/text blocks
+   ============================================ */
+.membrane {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  align-items: center;
+  margin-top: var(--space-8);
+}
+
+.membrane--reverse .membrane__media { order: 2; }
+
+.membrane__media img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.membrane__title {
+  font-size: clamp(24px, 2.4vw, 30px);
+  margin-bottom: var(--space-2);
+  color: var(--brand-gold);
+}
+
+.membrane__body p {
+  margin-bottom: var(--space-2);
+  color: var(--cream);
+}
+
+.membrane__body strong {
+  color: var(--white);
+  font-weight: 700;
+}
+
+.membrane__cta {
+  text-align: center;
+  margin-top: var(--space-8);
+}
+
+@media (max-width: 768px) {
+  .membrane {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+  }
+  .membrane--reverse .membrane__media { order: 0; }
+}
