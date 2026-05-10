@@ -13,7 +13,7 @@ export function FinalCTA({
   title = "Besoin d'un couvreur à Laval ou Montréal-Nord ?",
   sub = 'Contactez-nous dès aujourd\'hui pour une soumission gratuite.',
   ctaLabel = 'Obtenir une soumission gratuite !',
-  ctaHref = `tel:${SITE.phoneRaw}`,
+  ctaHref = '/contact',
 }: Props) {
   return (
     <section className="section section--dark final-cta" id="contact-cta">

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { RevealOnScroll } from '@/components/reveal/RevealOnScroll';
 import { SERVICES } from '@/lib/content';
+import { SITE } from '@/lib/constants';
 
 export function ServicesGrid() {
   return (
@@ -29,6 +30,24 @@ export function ServicesGrid() {
               </div>
             </RevealOnScroll>
           ))}
+          {/* fills the 2 empty cells that follow the 7th service card */}
+          <RevealOnScroll as="li" className="card card--zones" delayMs={700}>
+            <div className="card__body card--zones__body">
+              <p className="card--zones__label">Nous desservons</p>
+              <h3 className="card__title">Zones desservies</h3>
+              <ul className="card--zones__list">
+                {SITE.zones.map((zone) => (
+                  <li key={zone}>
+                    <span className="card--zones__dot" aria-hidden="true" />
+                    {zone}
+                  </li>
+                ))}
+              </ul>
+              <Link className="card__link" href="/contact">
+                Obtenir une soumission <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </RevealOnScroll>
         </ul>
       </div>
     </section>
