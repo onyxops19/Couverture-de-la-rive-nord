@@ -92,6 +92,63 @@ const countObserver = new IntersectionObserver(
 document.querySelectorAll('[data-count-to]').forEach((el) => countObserver.observe(el));
 
 // ============================================
+// Testimonials carousel
+// ============================================
+class TestimonialsCarousel {
+  constructor(el) {
+    this.el = el;
+    this.track = el.querySelector('.testimonials__track');
+    this.cards = [...el.querySelectorAll('.testimonial')];
+    this.prevBtn = el.querySelector('.testimonials__btn--prev');
+    this.nextBtn = el.querySelector('.testimonials__btn--next');
+    this.dots = [...el.querySelectorAll('.testimonials__dot')];
+    this.index = 0;
+    this.autoMs = 6000;
+    this.timer = null;
+
+    this.prevBtn?.addEventListener('click', () => { this.go(-1); this.restart(); });
+    this.nextBtn?.addEventListener('click', () => { this.go(1); this.restart(); });
+    this.dots.forEach((d, i) => d.addEventListener('click', () => { this.set(i); this.restart(); }));
+    this.el.addEventListener('mouseenter', () => this.pause());
+    this.el.addEventListener('mouseleave', () => this.play());
+
+    // Touch swipe (basic)
+    let startX = 0;
+    this.track.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+    this.track.addEventListener('touchend', (e) => {
+      const dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 40) { this.go(dx < 0 ? 1 : -1); this.restart(); }
+    });
+
+    this.update();
+    this.play();
+  }
+  go(delta) {
+    this.index = (this.index + delta + this.cards.length) % this.cards.length;
+    this.update();
+  }
+  set(i) {
+    this.index = i;
+    this.update();
+  }
+  update() {
+    this.track.style.transform = `translateX(${-this.index * 100}%)`;
+    this.dots.forEach((d, i) => d.classList.toggle('is-active', i === this.index));
+  }
+  play() {
+    this.pause();
+    if (this.cards.length <= 1) return;
+    this.timer = setInterval(() => this.go(1), this.autoMs);
+  }
+  pause() {
+    if (this.timer) { clearInterval(this.timer); this.timer = null; }
+  }
+  restart() { this.play(); }
+}
+
+document.querySelectorAll('.testimonials').forEach((el) => new TestimonialsCarousel(el));
+
+// ============================================
 // Contact form (preview-only — no real backend yet)
 // ============================================
 const contactForm = document.getElementById('contact-form');

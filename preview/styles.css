@@ -567,6 +567,197 @@ h1, h2, h3 {
 .link-arrow:hover span { transform: translateX(4px); }
 
 /* ============================================
+   Value grid (homepage value section, two columns)
+   ============================================ */
+.value-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .value-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+}
+
+.value-grid__text .section__title { text-align: left; }
+
+.value-grid__text .section__lead {
+  max-width: none;
+  margin: 0 0 var(--space-3);
+}
+
+.value-grid__text .section__inline-cta {
+  text-align: left;
+  margin-top: var(--space-3);
+}
+
+/* ============================================
+   Testimonials carousel
+   ============================================ */
+.testimonials {
+  position: relative;
+}
+
+.testimonials__heading {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.testimonials__heading-stars {
+  color: var(--brand-gold);
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
+.testimonials__viewport {
+  overflow: hidden;
+  background: var(--bg-light);
+  border-left: 4px solid var(--brand-gold);
+  position: relative;
+}
+
+.testimonials__viewport::before {
+  content: "“";
+  position: absolute;
+  top: -10px;
+  left: 12px;
+  font-family: Georgia, serif;
+  font-size: 80px;
+  line-height: 1;
+  color: var(--brand-gold);
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.testimonials__track {
+  display: flex;
+  transition: transform 500ms var(--ease-out);
+}
+
+.testimonial {
+  flex: 0 0 100%;
+  padding: var(--space-4) var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-height: 280px;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial__stars {
+  color: var(--brand-gold);
+  letter-spacing: 4px;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.testimonial__quote {
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.65;
+  font-style: italic;
+  color: var(--text-dark);
+  flex: 1;
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+.testimonial__author {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text-dark);
+  margin: 0;
+  margin-top: var(--space-1);
+}
+
+.testimonial__source {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0;
+}
+
+.testimonials__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.testimonials__btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid var(--border);
+  color: var(--text-dark);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  transition: background var(--dur-fast) var(--ease-out),
+              border-color var(--dur-fast) var(--ease-out),
+              color var(--dur-fast) var(--ease-out),
+              transform var(--dur-fast) var(--ease-out);
+  padding: 0;
+}
+
+.testimonials__btn:hover {
+  background: var(--brand-gold);
+  border-color: var(--brand-gold);
+  color: var(--white);
+  transform: scale(1.05);
+}
+
+.testimonials__btn--prev:hover { transform: scale(1.05) translateX(-2px); }
+.testimonials__btn--next:hover { transform: scale(1.05) translateX(2px); }
+
+.testimonials__dots {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.testimonials__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background var(--dur-fast) var(--ease-out),
+              transform var(--dur-fast) var(--ease-out);
+}
+
+.testimonials__dot.is-active {
+  background: var(--brand-gold);
+  transform: scale(1.3);
+}
+
+.testimonials__dot:hover { background: var(--gold-hover); }
+
+/* ============================================
    Stats
    ============================================ */
 .stats {
