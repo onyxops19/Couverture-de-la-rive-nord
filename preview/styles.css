@@ -494,3 +494,61 @@ h1, h2, h3 {
 }
 
 .link-arrow:hover span { transform: translateX(4px); }
+
+/* ============================================
+   Stats
+   ============================================ */
+.stats {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin: var(--space-6) auto var(--space-4);
+  max-width: 900px;
+  text-align: center;
+}
+
+.stat__num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(42px, 5vw, 56px);
+  font-weight: 700;
+  color: var(--brand-gold);
+  line-height: 1;
+}
+
+.stat__label {
+  display: block;
+  margin-top: var(--space-1);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--cream);
+}
+
+@media (max-width: 768px) {
+  .stats { grid-template-columns: 1fr; gap: var(--space-4); }
+}
+
+/* ============================================
+   Cert badges (text-based, until real logos arrive)
+   ============================================ */
+.cert-badges {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-top: var(--space-4);
+}
+
+.cert-badge {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid var(--brand-gold);
+  border-bottom-width: 2px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--white);
+}

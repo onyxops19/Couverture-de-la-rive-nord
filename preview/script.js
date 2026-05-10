@@ -58,3 +58,35 @@ navList.querySelectorAll('a').forEach((a) => {
     navToggle.setAttribute('aria-expanded', 'false');
   });
 });
+
+// ============================================
+// Count-up stats: animate 0 → target when scrolled into view
+// ============================================
+function countUp(el) {
+  const target = parseInt(el.dataset.countTo, 10);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1500;
+  const start = performance.now();
+
+  function tick(now) {
+    const t = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - t, 3); // easeOutCubic
+    el.textContent = Math.round(target * eased) + suffix;
+    if (t < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+const countObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        countUp(entry.target);
+        countObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
+
+document.querySelectorAll('[data-count-to]').forEach((el) => countObserver.observe(el));
