@@ -258,7 +258,11 @@ h1, h2, h3 {
   z-index: 100;
   background: var(--brand-charcoal);
   color: var(--white);
-  transition: box-shadow var(--dur-base) var(--ease-out);
+  transition: background var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+}
+
+.nav.is-hero {
+  background: transparent;
 }
 
 .nav.is-scrolled {
@@ -445,7 +449,8 @@ h1, h2, h3 {
    ============================================ */
 .hero {
   position: relative;
-  min-height: calc(100vh - 112px); /* viewport minus info bar + nav */
+  margin-top: -72px;
+  min-height: calc(100vh - 40px);
   display: flex;
   align-items: center;
   overflow: hidden;

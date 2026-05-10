@@ -20,13 +20,16 @@ export function StickyNav() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 80);
+    const handler = () => setScrolled(window.scrollY > 20);
+    handler();
     window.addEventListener('scroll', handler, { passive: true });
     return () => window.removeEventListener('scroll', handler);
   }, []);
 
+  const isHero = !scrolled && pathname === '/';
+
   return (
-    <nav className={`nav ${scrolled ? 'is-scrolled' : ''}`}>
+    <nav className={`nav${scrolled ? ' is-scrolled' : ''}${isHero ? ' is-hero' : ''}`}>
       <div className="container nav__inner">
         <Link className="nav__logo" href="/">
           <Image src="/logo.png" alt={SITE.name} width={200} height={98} priority />
