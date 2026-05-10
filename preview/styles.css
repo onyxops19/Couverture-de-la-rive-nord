@@ -913,3 +913,74 @@ h1, h2, h3 {
   color: var(--text-muted);
   text-align: center;
 }
+
+/* ============================================
+   Page header (used on inner pages: realisations, contact)
+   ============================================ */
+.page-header {
+  background: var(--brand-charcoal);
+  color: var(--white);
+  padding: var(--space-10) 0 var(--space-8);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at top, rgba(233,168,40,0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.page-header__inner {
+  position: relative;
+}
+
+.page-header__title {
+  font-size: clamp(32px, 4.4vw, 48px);
+  margin-bottom: var(--space-2);
+}
+
+.page-header__sub {
+  color: var(--brand-gold);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ============================================
+   Active nav state (for inner pages)
+   ============================================ */
+.nav__list a.is-active {
+  color: var(--brand-gold);
+}
+
+.nav__list a.is-active::after {
+  transform: scaleX(1);
+}
+
+/* ============================================
+   Full gallery variant (realisations page — 4 columns)
+   ============================================ */
+.gallery--full {
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: var(--space-6);
+}
+
+@media (max-width: 992px) {
+  .gallery--full { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 700px) {
+  .gallery--full { grid-template-columns: repeat(2, 1fr); }
+}
+
+.gallery--full.stagger .reveal:nth-child(7)  { transition-delay: 480ms; }
+.gallery--full.stagger .reveal:nth-child(8)  { transition-delay: 560ms; }
+.gallery--full.stagger .reveal:nth-child(9)  { transition-delay: 640ms; }
+.gallery--full.stagger .reveal:nth-child(10) { transition-delay: 720ms; }
+.gallery--full.stagger .reveal:nth-child(11) { transition-delay: 800ms; }
+.gallery--full.stagger .reveal:nth-child(12) { transition-delay: 880ms; }
