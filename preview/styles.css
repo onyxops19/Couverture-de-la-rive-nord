@@ -601,15 +601,26 @@ h1, h2, h3 {
    ============================================ */
 .value-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 2.2fr 1fr;
   gap: var(--space-6);
   align-items: center;
+}
+
+.value-grid__carousel {
+  width: 100%;
+  max-width: 360px;
+  margin-left: auto;
 }
 
 @media (max-width: 900px) {
   .value-grid {
     grid-template-columns: 1fr;
     gap: var(--space-6);
+  }
+  .value-grid__carousel {
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -678,13 +689,17 @@ h1, h2, h3 {
 
 .testimonial {
   flex: 0 0 100%;
-  padding: var(--space-3) var(--space-3);
+  padding: var(--space-3);
   display: flex;
   flex-direction: column;
   gap: 12px;
-  min-height: 240px;
+  /* aspect-ratio keeps the card roughly square at the carousel's narrow width */
+  aspect-ratio: 1 / 1;
+  min-height: 280px;
   position: relative;
   z-index: 1;
+  box-sizing: border-box;
+  justify-content: space-between;
 }
 
 .testimonial__stars {
@@ -696,14 +711,18 @@ h1, h2, h3 {
 
 .testimonial__quote {
   font-family: var(--font-body);
-  font-size: clamp(14px, 1.05vw, 15.5px);
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.55;
   font-style: italic;
   color: var(--text-dark);
   flex: 1;
   margin: 0;
   border: none;
   padding: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .testimonial__author {
