@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contactez-nous — Couverture de la Rive-Nord</title>
+  <meta name="description" content="Contactez Couverture de la Rive-Nord pour une soumission gratuite de votre toiture à Laval, Montréal-Nord ou Terrebonne. Téléphone, courriel et formulaire en ligne.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Raleway:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Top info bar -->
+  <div class="info-bar">
+    <div class="container info-bar__inner">
+      <a class="info-bar__phone" href="tel:+15148357617">+1 (514) 835-7617</a>
+      <a class="info-bar__email" href="mailto:info@couverturerivenord.com">info@couverturerivenord.com</a>
+    </div>
+  </div>
+
+  <!-- Sticky nav -->
+  <nav class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="nav__logo" href="index.html">
+        <img src="assets/logo.png" alt="Couverture de la Rive-Nord" />
+      </a>
+
+      <button class="nav__toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__list" id="nav-list">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="index.html#services">Nos services</a></li>
+        <li><a href="index.html#membranes">Nos membranes</a></li>
+        <li><a href="realisations.html">Nos réalisations</a></li>
+        <li><a href="contact.html" class="is-active">Contact</a></li>
+        <li class="nav__cta-mobile"><a href="tel:+15148357617" class="btn btn--gold">+1 (514) 835-7617</a></li>
+      </ul>
+
+      <a href="tel:+15148357617" class="nav__phone-cta">Appelez maintenant</a>
+    </div>
+  </nav>
+
+  <!-- Page header -->
+  <header class="page-header">
+    <div class="container page-header__inner">
+      <h1 class="page-header__title reveal">Contactez-nous</h1>
+      <p class="page-header__sub reveal">
+        Une soumission gratuite, sans engagement
+      </p>
+    </div>
+  </header>
+
+  <!-- Contact body -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Left: Form -->
+        <div class="contact-form-wrap reveal">
+          <h2 class="contact__heading">Demandez votre soumission</h2>
+          <p class="contact__intro">
+            Remplissez ce formulaire et notre équipe vous recontactera dans les meilleurs délais. Pour une demande urgente, appelez-nous directement au <a href="tel:+15148357617">(514) 835-7617</a>.
+          </p>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="prenom">Prénom <span class="req">*</span></label>
+                <input type="text" id="prenom" name="prenom" required>
+              </div>
+              <div class="form-field">
+                <label for="nom">Nom <span class="req">*</span></label>
+                <input type="text" id="nom" name="nom" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="courriel">Courriel <span class="req">*</span></label>
+                <input type="email" id="courriel" name="courriel" required>
+              </div>
+              <div class="form-field">
+                <label for="telephone">Téléphone <span class="req">*</span></label>
+                <input type="tel" id="telephone" name="telephone" required>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="adresse">Adresse complète <span class="req">*</span></label>
+              <input type="text" id="adresse" name="adresse" placeholder="Numéro, rue, ville, code postal" required>
+            </div>
+
+            <fieldset class="form-fieldset">
+              <legend>Avez-vous un puit de lumière ?</legend>
+              <div class="form-radio-group">
+                <label class="form-radio">
+                  <input type="radio" name="puit-de-lumiere" value="oui">
+                  <span>Oui</span>
+                </label>
+                <label class="form-radio">
+                  <input type="radio" name="puit-de-lumiere" value="non">
+                  <span>Non</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet, le type de toiture, l'urgence..."></textarea>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="btn btn--gold">Envoyer ma demande</button>
+            </div>
+
+            <p class="form-success" id="form-success" hidden>
+              Merci ! Votre demande a été reçue. Nous vous recontacterons sous peu.
+              <span class="form-success__note">(Mode aperçu — la vraie soumission sera branchée en Phase 2.)</span>
+            </p>
+          </form>
+        </div>
+
+        <!-- Right: Info + Map -->
+        <aside class="contact-info-wrap reveal">
+          <div class="contact-info-card">
+            <h2 class="contact__heading">Coordonnées</h2>
+
+            <ul class="contact-info-list">
+              <li>
+                <span class="contact-info-list__label">Téléphone</span>
+                <a href="tel:+15148357617" class="contact-info-list__value">+1 (514) 835-7617</a>
+              </li>
+              <li>
+                <span class="contact-info-list__label">Courriel</span>
+                <a href="mailto:info@couverturerivenord.com" class="contact-info-list__value">info@couverturerivenord.com</a>
+              </li>
+              <li>
+                <span class="contact-info-list__label">Adresse</span>
+                <span class="contact-info-list__value">3776 Rue Georges Corbeil<br>Terrebonne, QC, J6X 4J5</span>
+              </li>
+              <li>
+                <span class="contact-info-list__label">Suivez-nous</span>
+                <a href="https://fr-ca.facebook.com/CouvertureRiveNord/" target="_blank" rel="noopener" class="contact-info-list__value">Facebook</a>
+              </li>
+            </ul>
+
+            <div class="contact-info-certs">
+              <span class="cert-badge">APCHQ</span>
+              <span class="cert-badge">CERTIFIÉ FIRESTONE</span>
+            </div>
+          </div>
+
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps?q=3776+Rue+Georges+Corbeil,+Terrebonne,+QC+J6X+4J5&output=embed"
+              width="100%"
+              height="380"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Carte — 3776 Rue Georges Corbeil, Terrebonne">
+            </iframe>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <a class="footer__logo" href="index.html">
+          <img src="assets/logo.png" alt="Couverture de la Rive-Nord" />
+        </a>
+
+        <div class="footer__certs">
+          <span class="cert-badge">APCHQ</span>
+          <span class="cert-badge">CERTIFIÉ FIRESTONE</span>
+        </div>
+
+        <address class="footer__address">
+          3776 Rue Georges Corbeil<br>
+          Terrebonne, QC, J6X 4J5
+        </address>
+
+        <ul class="footer__contact">
+          <li><a href="tel:+15148357617">+1 (514) 835-7617</a></li>
+          <li><a href="mailto:info@couverturerivenord.com">info@couverturerivenord.com</a></li>
+          <li><a href="https://fr-ca.facebook.com/CouvertureRiveNord/" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Liens rapides</h4>
+        <ul class="footer__links">
+          <li><a href="index.html#services">Nos services</a></li>
+          <li><a href="index.html#membranes">Nos membranes</a></li>
+          <li><a href="realisations.html">Nos réalisations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Zones desservies</h4>
+        <ul class="footer__links">
+          <li>Laval</li>
+          <li>Montréal-Nord</li>
+          <li>Terrebonne</li>
+          <li>Rive-Nord</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__copyright">
+      <div class="container">
+        © 2026 Couverture de la Rive-Nord Inc. — Tous droits réservés
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

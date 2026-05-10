@@ -90,3 +90,29 @@ const countObserver = new IntersectionObserver(
 );
 
 document.querySelectorAll('[data-count-to]').forEach((el) => countObserver.observe(el));
+
+// ============================================
+// Contact form (preview-only — no real backend yet)
+// ============================================
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // Basic required-field check (HTML5 validation)
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
+
+    // Show success message
+    const success = document.getElementById('form-success');
+    if (success) {
+      success.hidden = false;
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // Optionally clear the form
+    contactForm.reset();
+  });
+}
