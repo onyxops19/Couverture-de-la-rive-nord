@@ -149,6 +149,77 @@ h1, h2, h3 {
    ============================================ */
 
 /* ============================================
+   Promo bar (top of every page)
+   ============================================ */
+.promo-bar {
+  background: var(--brand-gold);
+  color: var(--text-dark);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 9px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.promo-bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+  animation: promo-shimmer 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes promo-shimmer {
+  0% { left: -100%; }
+  60%, 100% { left: 100%; }
+}
+
+.promo-bar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.promo-bar__icon { font-size: 15px; line-height: 1; }
+
+.promo-bar__text { letter-spacing: 0.04em; }
+
+.promo-bar__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  background: var(--text-dark);
+  color: var(--white);
+  border-radius: 2px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 11px;
+  transition: background var(--dur-fast) var(--ease-out),
+              transform var(--dur-fast) var(--ease-out);
+}
+
+.promo-bar__cta:hover {
+  background: rgba(0,0,0,0.75);
+  transform: translateX(2px);
+}
+
+@media (max-width: 600px) {
+  .promo-bar { font-size: 12px; padding: 7px 0; }
+  .promo-bar__cta { padding: 3px 8px; font-size: 10px; }
+}
+
+/* ============================================
    Top info bar
    ============================================ */
 .info-bar {
