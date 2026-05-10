@@ -20,7 +20,7 @@ export default function ContactPage() {
         <div className="container">
           <div className="contact-grid">
             {/* Left: form */}
-            <div>
+            <div id="soumission">
               <h2 className="contact__heading">Demandez votre soumission</h2>
               <p className="contact__intro">
                 Remplissez le formulaire ci-dessous et nous vous rappellerons
