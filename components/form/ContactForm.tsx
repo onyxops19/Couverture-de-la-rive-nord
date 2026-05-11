@@ -4,6 +4,16 @@ import { useFormState, useFormStatus } from 'react-dom';
 import { submitContact, type FormState } from '@/app/contact/actions';
 import { Button } from '@/components/ui/Button';
 
+const SERVICES = [
+  'Installation',
+  'Réparation',
+  'Réfection',
+  'Inspection',
+  'Entretien',
+  'Déneigement',
+  'Autres',
+];
+
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
@@ -52,6 +62,23 @@ export function ContactForm() {
         <label htmlFor="email">Courriel <span className="req">*</span></label>
         <input id="email" name="email" type="email" required autoComplete="email" placeholder="jean@exemple.com" />
       </div>
+
+      <div className="form-field">
+        <label htmlFor="address">Adresse des travaux</label>
+        <input id="address" name="address" type="text" autoComplete="street-address" placeholder="123 Rue Principale, Laval, QC" />
+      </div>
+
+      <fieldset className="form-fieldset">
+        <legend className="form-fieldset__legend">Type de services</legend>
+        <div className="form-checkboxes">
+          {SERVICES.map((service) => (
+            <label key={service} className="form-checkbox">
+              <input type="checkbox" name="services" value={service} />
+              <span>{service}</span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
 
       <div className="form-field">
         <label htmlFor="message">Message <span className="req">*</span></label>

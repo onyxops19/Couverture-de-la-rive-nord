@@ -6,6 +6,10 @@ const schema = z.object({
   name: z.string().min(2, 'Nom requis'),
   phone: z.string().min(10, 'Numéro de téléphone invalide'),
   email: z.string().email('Courriel invalide'),
+  address: z.string().optional(),
+  services: z.union([z.string(), z.array(z.string())]).optional().transform((v) =>
+    v === undefined ? [] : Array.isArray(v) ? v : [v]
+  ),
   message: z.string().min(10, 'Message trop court'),
 });
 
@@ -22,6 +26,8 @@ export async function submitContact(
     name: formData.get('name'),
     phone: formData.get('phone'),
     email: formData.get('email'),
+    address: formData.get('address') ?? undefined,
+    services: formData.getAll('services'),
     message: formData.get('message'),
   };
 

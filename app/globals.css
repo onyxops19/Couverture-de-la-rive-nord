@@ -1508,6 +1508,47 @@ h1, h2, h3 {
   background: rgba(233, 168, 40, 0.08);
 }
 
+.form-fieldset__legend {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  margin-bottom: var(--space-2);
+}
+
+.form-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-1) var(--space-2);
+}
+
+@media (max-width: 480px) {
+  .form-checkboxes { grid-template-columns: 1fr; }
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: border-color var(--dur-fast) var(--ease-out),
+              background var(--dur-fast) var(--ease-out);
+}
+
+.form-checkbox:hover { border-color: var(--brand-gold); }
+
+.form-checkbox input { accent-color: var(--brand-gold); flex-shrink: 0; }
+
+.form-checkbox:has(input:checked) {
+  border-color: var(--brand-gold);
+  background: rgba(233, 168, 40, 0.08);
+}
+
 .form-submit {
   margin-top: var(--space-2);
 }
