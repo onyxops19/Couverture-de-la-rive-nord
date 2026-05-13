@@ -4,7 +4,16 @@ import { SITE } from '@/lib/constants';
 export function Hero() {
   return (
     <section className="hero" id="top">
-      <div className="hero__membrane" aria-hidden="true" />
+      <video
+        className="hero__video"
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster=""
+      >
+        <source src="/hero.mp4" type="video/mp4" />
+      </video>
       <div className="hero__overlay"></div>
 
       <div className="container hero__inner">

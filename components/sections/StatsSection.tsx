@@ -7,9 +7,10 @@ import { CertBadge } from '@/components/ui/CertBadge';
 const STATS = [
   { target: 25, suffix: '+',     label: "Années d'expérience" },
   { target: 50, suffix: ' ans',  label: 'Durée de vie membrane EPDM' },
+  { target: 4.9, suffix: ' ★',  label: 'Avis Google', decimals: 1 },
 ];
 
-function StatNumber({ target, suffix }: { target: number; suffix: string }) {
+function StatNumber({ target, suffix, decimals = 0 }: { target: number; suffix: string; decimals?: number }) {
   const ref = useRef<HTMLSpanElement | null>(null);
   const [value, setValue] = useState(0);
   const [done, setDone] = useState(false);
@@ -26,7 +27,8 @@ function StatNumber({ target, suffix }: { target: number; suffix: string }) {
             const tick = (now: number) => {
               const t = Math.min((now - start) / dur, 1);
               const eased = 1 - Math.pow(1 - t, 3);
-              setValue(Math.round(target * eased));
+              const raw = target * eased;
+              setValue(decimals > 0 ? parseFloat(raw.toFixed(decimals)) : Math.round(raw));
               if (t < 1) requestAnimationFrame(tick);
               else setDone(true);
             };
@@ -39,11 +41,11 @@ function StatNumber({ target, suffix }: { target: number; suffix: string }) {
     );
     obs.observe(el);
     return () => obs.disconnect();
-  }, [target]);
+  }, [target, decimals]);
 
   return (
     <span ref={ref} className={`stat__num ${done ? 'is-counted' : ''}`}>
-      {value}{suffix}
+      {decimals > 0 ? value.toFixed(decimals) : value}{suffix}
     </span>
   );
 }
@@ -64,14 +66,10 @@ export function StatsSection() {
         <ul className="stats stagger">
           {STATS.map((s, i) => (
             <RevealOnScroll as="li" className="stat" delayMs={i * 100} key={s.label}>
-              <StatNumber target={s.target} suffix={s.suffix} />
+              <StatNumber target={s.target} suffix={s.suffix} decimals={s.decimals ?? 0} />
               <span className="stat__label">{s.label}</span>
             </RevealOnScroll>
           ))}
-          <RevealOnScroll as="li" className="stat" delayMs={200}>
-            <span className="stat__num stat__num--text">4.9 ★</span>
-            <span className="stat__label">Avis Google</span>
-          </RevealOnScroll>
         </ul>
 
         <RevealOnScroll className="cert-badges">

@@ -16,7 +16,7 @@ export const SITE = {
   },
   zones: ['Laval', 'Montréal-Nord', 'Terrebonne', 'Rive-Nord'],
   certifications: ['APCHQ'],
-  yearsInBusiness: 23,
+  yearsInBusiness: 25,
 } as const;
 
 export const PROMO_TEXT = 'Places limitées · Réservez votre place maintenant';
