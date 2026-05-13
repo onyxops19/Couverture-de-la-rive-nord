@@ -35,6 +35,7 @@ export const SERVICES: Service[] = [
   { slug: 'entretien', title: "L'entretien", description: 'Entretien annuel pour éviter les dégradations causées par les intempéries québécoises. Un partenaire sur le long terme.', image: '/services/entretien.jpg', alt: 'Entretien de toiture' },
   { slug: 'deneigement', title: 'Le déneigement', description: 'Équipement professionnel pour déneiger votre toit de manière sécuritaire. Évitez infiltrations d\'eau et fléchissement de la charpente.', image: '/services/deneigement.jpg', alt: 'Déneigement de toiture' },
   { slug: 'autres', title: 'Autres services', description: 'Nettoyage de gouttières, inspection et nettoyage de drains, calfeutrage, travaux avec nacelle, installation de lumières de Noël.', image: '/services/autres.jpg', alt: 'Autres services' },
+  { slug: 'ajout-unites', title: "Ajout d'unités sur toitures", description: "Installation professionnelle d'unités mécaniques, de climatisation et de ventilation sur toitures commerciales et industrielles. Travail structuré et sécuritaire, respectant l'intégrité de votre membrane.", image: '/services/installation.jpg', alt: "Ajout d'unités sur toiture commerciale et industrielle" },
 ];
 
 export type Advantage = {

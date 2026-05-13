@@ -8,14 +8,14 @@ export const SITE = {
   email: 'admin@couverturerivenord.com',
   facebook: 'https://fr-ca.facebook.com/CouvertureRiveNord/',
   address: {
-    street: '3776 Rue Georges Corbeil',
-    city: 'Terrebonne',
+    street: '6410 Bd des Mille-Îles',
+    city: 'Laval',
     region: 'QC',
-    postal: 'J6X 4J5',
+    postal: 'H7B 1B3',
     country: 'CA',
   },
   zones: ['Laval', 'Montréal-Nord', 'Terrebonne', 'Rive-Nord'],
-  certifications: ['APCHQ', 'Certifié Firestone'],
+  certifications: ['APCHQ'],
   yearsInBusiness: 23,
 } as const;
 

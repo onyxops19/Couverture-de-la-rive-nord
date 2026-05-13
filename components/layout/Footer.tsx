@@ -14,7 +14,6 @@ export function Footer() {
 
           <div className="footer__certs">
             <CertBadge>APCHQ</CertBadge>
-            <CertBadge>CERTIFIÉ FIRESTONE</CertBadge>
           </div>
 
           <address className="footer__address">

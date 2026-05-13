@@ -32,7 +32,7 @@ export default function CouvreurMontrealnordPage() {
             votre facture énergétique tout en protégeant votre bâtiment des aléas climatiques du Québec.
           </RevealOnScroll>
           <RevealOnScroll as="p" className="section__lead">
-            Membre de l&apos;APCHQ et certifié Firestone, Couverture de la Rive-Nord s&apos;engage à vous offrir
+            Membre de l&apos;APCHQ, Couverture de la Rive-Nord s&apos;engage à vous offrir
             un travail irréprochable, dans les délais convenus, au meilleur rapport qualité/prix.
           </RevealOnScroll>
           <RevealOnScroll className="advantages__ctas">

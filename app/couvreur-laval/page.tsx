@@ -28,8 +28,8 @@ export default function CouvreurLavalPage() {
           <RevealOnScroll as="p" className="section__lead">
             Couverture de la Rive-Nord est votre couvreur de confiance à Laval et dans toute la Rive-Nord.
             Depuis plus de 23 ans, nous réalisons des projets d&apos;installation, de réfection et d&apos;entretien
-            de toiture pour des résidences et des bâtiments commerciaux. Notre équipe est certifiée APCHQ
-            et homologuée Firestone — gage de qualité et de durabilité.
+            de toiture pour des résidences et des bâtiments commerciaux. Notre équipe est certifiée APCHQ,
+            gage de qualité et de durabilité.
           </RevealOnScroll>
           <RevealOnScroll as="p" className="section__lead">
             Que vous ayez un toit plat à membrane blanche ou une toiture en pente, nous avons la solution

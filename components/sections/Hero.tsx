@@ -4,9 +4,7 @@ import { SITE } from '@/lib/constants';
 export function Hero() {
   return (
     <section className="hero" id="top">
-      <video className="hero__video" autoPlay muted loop playsInline>
-        <source src="/hero.mp4" type="video/mp4" />
-      </video>
+      <div className="hero__membrane" aria-hidden="true" />
       <div className="hero__overlay"></div>
 
       <div className="container hero__inner">
@@ -21,8 +19,6 @@ export function Hero() {
 
         <div className="hero__badges reveal is-visible">
           <span className="badge">Membre APCHQ</span>
-          <span className="badge-divider"></span>
-          <span className="badge">Certifié Firestone</span>
         </div>
 
         <div className="hero__ctas reveal is-visible">

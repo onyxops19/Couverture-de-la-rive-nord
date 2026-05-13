@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     default: 'Couverture de la Rive-Nord — Couvreur à Laval et Montréal-Nord',
     template: '%s — Couverture de la Rive-Nord',
   },
-  description: 'Compagnie de toiture à Laval et Montréal-Nord depuis plus de 23 ans. Spécialiste des membranes blanches EPDM et TPO pour toits plats. Membre APCHQ, certifié Firestone.',
+  description: 'Compagnie de toiture à Laval et Montréal-Nord depuis plus de 23 ans. Spécialiste des membranes blanches EPDM et TPO pour toits plats. Membre APCHQ.',
   openGraph: {
     type: 'website',
     locale: 'fr_CA',

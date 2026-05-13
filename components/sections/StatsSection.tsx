@@ -7,7 +7,6 @@ import { CertBadge } from '@/components/ui/CertBadge';
 const STATS = [
   { target: 23, suffix: '+',     label: "Années d'expérience" },
   { target: 50, suffix: ' ans',  label: 'Durée de vie membrane EPDM' },
-  { target: 30, suffix: ' ans',  label: 'Garantie fabricant Firestone' },
 ];
 
 function StatNumber({ target, suffix }: { target: number; suffix: string }) {
@@ -59,7 +58,7 @@ export function StatsSection() {
         </RevealOnScroll>
 
         <RevealOnScroll as="p" className="section__lead">
-          Recommandé par l&apos;APCHQ et certifié Firestone (garantie fabricant jusqu&apos;à 30 ans), Couverture de la Rive-Nord œuvre depuis 23 ans à Laval, Montréal-Nord, Terrebonne et la Rive-Nord. Résidentiel comme commercial, notre équipe installe des membranes blanches durables, écologiques et rentables.
+          Membre de l&apos;APCHQ, Couverture de la Rive-Nord œuvre depuis 23 ans à Laval, Montréal-Nord, Terrebonne et la Rive-Nord. Résidentiel comme commercial, notre équipe installe des membranes blanches durables, écologiques et rentables.
         </RevealOnScroll>
 
         <ul className="stats stagger">
@@ -73,7 +72,6 @@ export function StatsSection() {
 
         <RevealOnScroll className="cert-badges">
           <CertBadge>APCHQ</CertBadge>
-          <CertBadge>CERTIFIÉ FIRESTONE</CertBadge>
         </RevealOnScroll>
       </div>
     </section>
