@@ -46,7 +46,7 @@ export type Advantage = {
 
 export const ADVANTAGES: Advantage[] = [
   { iconKey: 'house',  title: 'Un service exceptionnel', body: "De l'identification de vos besoins jusqu'à la fin de vos travaux, notre équipe est à votre écoute et disponible tout le long de vos projets." },
-  { iconKey: 'medal',  title: 'Une équipe compétente',  body: "Plus de 23 ans d'expérience. Nos couvreurs réalisent tous vos projets avec passion, professionnalisme et minutie." },
+  { iconKey: 'medal',  title: 'Une équipe compétente',  body: "Plus de 25 ans d'expérience. Nos couvreurs réalisent tous vos projets avec passion, professionnalisme et minutie." },
   { iconKey: 'dollar', title: 'Des prix compétitifs',   body: 'Un excellent rapport qualité/prix, autant pour nos services que pour nos matériaux. Soumission gratuite, sans engagement.' },
 ];
 

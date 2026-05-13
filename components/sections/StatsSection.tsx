@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { RevealOnScroll } from '@/components/reveal/RevealOnScroll';
-import { CertBadge } from '@/components/ui/CertBadge';
 
 const STATS = [
   { target: 25, suffix: '+',     label: "Années d'expérience" },
@@ -68,11 +67,11 @@ export function StatsSection() {
               <span className="stat__label">{s.label}</span>
             </RevealOnScroll>
           ))}
+          <RevealOnScroll as="li" className="stat" delayMs={200}>
+            <span className="stat__num stat__num--text">Membre</span>
+            <span className="stat__label">APCHQ</span>
+          </RevealOnScroll>
         </ul>
-
-        <RevealOnScroll className="cert-badges">
-          <CertBadge>Membre APCHQ</CertBadge>
-        </RevealOnScroll>
       </div>
     </section>
   );

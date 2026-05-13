@@ -893,6 +893,11 @@ h1, h2, h3 {
                0 0 48px rgba(233, 168, 40, 0.22);
 }
 
+.stat__num--text {
+  font-size: clamp(28px, 3.5vw, 38px);
+  letter-spacing: 0.04em;
+}
+
 .stat__label {
   display: block;
   margin-top: var(--space-1);
