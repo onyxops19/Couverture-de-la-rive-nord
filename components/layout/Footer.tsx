@@ -13,7 +13,7 @@ export function Footer() {
           </Link>
 
           <div className="footer__certs">
-            <CertBadge>APCHQ</CertBadge>
+            <CertBadge>Membre APCHQ</CertBadge>
           </div>
 
           <address className="footer__address">

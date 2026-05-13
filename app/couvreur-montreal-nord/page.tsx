@@ -17,7 +17,7 @@ export default function CouvreurMontrealnordPage() {
     <main>
       <PageHeader
         title="Couvreur à Montréal-Nord"
-        lead="Expert en toiture à membrane blanche depuis plus de 23 ans"
+        lead="Expert en toiture à membrane blanche depuis plus de 25 ans"
       />
 
       <section className="section section--light">
@@ -26,7 +26,7 @@ export default function CouvreurMontrealnordPage() {
             Couverture de la Rive-Nord à Montréal-Nord
           </RevealOnScroll>
           <RevealOnScroll as="p" className="section__lead">
-            Actifs à Montréal-Nord depuis plus de 23 ans, nous intervenons rapidement pour tous vos projets
+            Actifs à Montréal-Nord depuis plus de 25 ans, nous intervenons rapidement pour tous vos projets
             de toiture : installation de membranes EPDM et TPO, réfection de toits plats, réparations
             d&apos;urgence et entretien préventif. Notre expertise en membranes blanches écologiques réduit
             votre facture énergétique tout en protégeant votre bâtiment des aléas climatiques du Québec.

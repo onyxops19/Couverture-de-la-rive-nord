@@ -5,7 +5,7 @@ import { FinalCTA } from '@/components/sections/FinalCTA';
 
 export const metadata: Metadata = {
   title: 'Nos réalisations — Couverture de la Rive-Nord',
-  description: 'Découvrez nos projets de toiture à membrane blanche EPDM et TPO à Laval et Montréal-Nord. Plus de 23 ans de réalisations.',
+  description: 'Découvrez nos projets de toiture à membrane blanche EPDM et TPO à Laval et Montréal-Nord. Plus de 25 ans de réalisations.',
 };
 
 export default function RealisationsPage() {
@@ -13,7 +13,7 @@ export default function RealisationsPage() {
     <main>
       <PageHeader
         title="Nos réalisations"
-        lead="Plus de 23 ans de projets de toiture à membrane blanche"
+        lead="Plus de 25 ans de projets de toiture à membrane blanche"
       />
       <RealizationsGallery count={12} variant="full" showLink={false} />
       <FinalCTA />

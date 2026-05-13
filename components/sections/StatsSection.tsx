@@ -5,7 +5,7 @@ import { RevealOnScroll } from '@/components/reveal/RevealOnScroll';
 import { CertBadge } from '@/components/ui/CertBadge';
 
 const STATS = [
-  { target: 23, suffix: '+',     label: "Années d'expérience" },
+  { target: 25, suffix: '+',     label: "Années d'expérience" },
   { target: 50, suffix: ' ans',  label: 'Durée de vie membrane EPDM' },
 ];
 
@@ -53,12 +53,12 @@ export function StatsSection() {
     <section className="section section--dark">
       <div className="container">
         <RevealOnScroll as="h2" className="section__title section__title--centered">
-          Plus de 23 ans<br />
+          Plus de 25 ans<br />
           au service de votre toiture
         </RevealOnScroll>
 
         <RevealOnScroll as="p" className="section__lead">
-          Membre de l&apos;APCHQ, Couverture de la Rive-Nord œuvre depuis 23 ans à Laval, Montréal-Nord, Terrebonne et la Rive-Nord. Résidentiel comme commercial, notre équipe installe des membranes blanches durables, écologiques et rentables.
+          Membre de l&apos;APCHQ, Couverture de la Rive-Nord œuvre depuis 25 ans à Laval, Montréal-Nord, Terrebonne et la Rive-Nord. Résidentiel comme commercial, notre équipe installe des membranes blanches durables, écologiques et rentables.
         </RevealOnScroll>
 
         <ul className="stats stagger">
@@ -71,7 +71,7 @@ export function StatsSection() {
         </ul>
 
         <RevealOnScroll className="cert-badges">
-          <CertBadge>APCHQ</CertBadge>
+          <CertBadge>Membre APCHQ</CertBadge>
         </RevealOnScroll>
       </div>
     </section>
